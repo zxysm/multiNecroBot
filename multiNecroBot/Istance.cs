@@ -13,7 +13,7 @@ namespace multiNecroBot
         public string istancePath = "";
         public string exe_Path = "";
         public String mainDir = Directory.GetCurrentDirectory() + "\\";
-        public string nativeDir = Directory.GetCurrentDirectory() + "\\relase\\";
+        public string nativeDir = Directory.GetCurrentDirectory() + "\\release\\";
         public Auth auth;
 
         public Istance(Auth auth)
@@ -78,7 +78,7 @@ namespace multiNecroBot
                     File.Copy(newPath, newPath.Replace(nativeDir, istancePath), true);
             } catch (Exception e)
             {
-                Program.writeColor("Error copying native program..", ConsoleColor.Red);
+                Program.writeColor("Error copying native program.." + istancePath, ConsoleColor.Red);
                 return;
             }
 

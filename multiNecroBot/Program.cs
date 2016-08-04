@@ -23,7 +23,8 @@ namespace multiNecroBot
 
             foreach (Auth a in authList)
             {
-                try {
+                try
+                {
                     istanceList.Add(new Istance(a));
                     if (isEmpty)
                     {
@@ -32,12 +33,15 @@ namespace multiNecroBot
                             isEmpty = false;
                         }
                     }
-                }catch(Exception e)
+                }
+                catch (Exception e)
                 {
                     writeColor("Error: empty sessions file", ConsoleColor.Red);
                     return;
                 }
             }
+
+            addConfig(istanceList);
 
             if (!isEmpty)
             {
@@ -51,7 +55,44 @@ namespace multiNecroBot
                     //a
                 };
             }
-            
+
+        }
+
+        public static void addConfig(List<Istance> istanceList)
+        {
+            string configJson = Directory.GetCurrentDirectory() + "\\config.json";
+            if (File.Exists(configJson) && File.ReadAllText(configJson) != "")
+            {
+                writeColor("Found config.json, applying to all sessions..", ConsoleColor.Blue);
+                try
+                {
+                    foreach (Istance a in istanceList)
+                    {
+                        string destConfJson = a.istancePath + "config\\config.json";
+                        if (File.Exists(destConfJson))
+                        {
+                            if (File.GetLastWriteTime(configJson) > File.GetLastWriteTime(destConfJson))
+                            {
+                                writeColor("File updated: " + a.istancePath + "config\\config.json", ConsoleColor.Blue);
+                                File.Copy(configJson, destConfJson, true);
+                            }
+                        }
+                        else
+                        {
+                            writeColor("File added: " + a.istancePath + "config\\config.json", ConsoleColor.Blue);
+                            File.Copy(configJson, destConfJson, true);
+                        }                       
+                    }
+                }
+                catch (Exception e)
+                {
+                    writeColor("Error: can't copy config.json", ConsoleColor.Red);
+                }
+            }
+            else
+            {
+                writeColor("Config.json not found or empty", ConsoleColor.Blue);
+            }
         }
 
         public static void startIstances(List<Istance> istanceList)
