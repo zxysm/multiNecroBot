@@ -1,0 +1,8 @@
+E:\__SCUOLA e PROJECT\__PROJECTS\__PROJECTS\multiNecroBot\multiNecroBot\bin\Debug\multiNecroBot.exe.config
+E:\__SCUOLA e PROJECT\__PROJECTS\__PROJECTS\multiNecroBot\multiNecroBot\bin\Debug\multiNecroBot.exe
+E:\__SCUOLA e PROJECT\__PROJECTS\__PROJECTS\multiNecroBot\multiNecroBot\bin\Debug\multiNecroBot.pdb
+E:\__SCUOLA e PROJECT\__PROJECTS\__PROJECTS\multiNecroBot\multiNecroBot\bin\Debug\Newtonsoft.Json.dll
+E:\__SCUOLA e PROJECT\__PROJECTS\__PROJECTS\multiNecroBot\multiNecroBot\bin\Debug\Newtonsoft.Json.xml
+E:\__SCUOLA e PROJECT\__PROJECTS\__PROJECTS\multiNecroBot\multiNecroBot\obj\Debug\multiNecroBot.exe
+E:\__SCUOLA e PROJECT\__PROJECTS\__PROJECTS\multiNecroBot\multiNecroBot\obj\Debug\multiNecroBot.pdb
+E:\__SCUOLA e PROJECT\__PROJECTS\__PROJECTS\multiNecroBot\multiNecroBot\obj\Debug\multiNecroBot.csprojResolveAssemblyReference.cache
